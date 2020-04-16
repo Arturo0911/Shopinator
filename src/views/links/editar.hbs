@@ -1,0 +1,52 @@
+<div class="containter p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/main/Editar/{{edit.cedula}}" method="POST" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit.cedula}}" disabled name="cedula">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" required value="{{edit.nombres}}" name="nombres">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit.apellidos}}" name="apellidos">
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control" required name="image">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit.telefono}}" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" value="{{edit.email}}" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit.usuario}}" name="usuario">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="clave" placeholder="Nueva clave">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="repeatClave"
+                                placeholder="Confirmar la nueva clave">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Actualizar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 mx-auto">
+            <div class="card-body">
+                <img width="50%" height="50%" src="../../public/img/logo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>

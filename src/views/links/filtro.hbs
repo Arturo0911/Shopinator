@@ -1,0 +1,37 @@
+<div class="containter p-4">
+    <div class="row">
+        <table class="table" text-align="center">
+            <thead class="thead-dark" align="center">
+                <tr>
+                    <!--<th scope="col">Propietario</th>-->
+                    <th scope="col">Nombre</th>
+                    <th scope="col">imagen</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            {{#each values}}
+            
+                <tbody>
+                    <tr align="center">
+                        
+                        <td>{{nombre_producto}}</td>
+                        <td ><img width="25%" height="25%" class="img-thumbnail"  src="/public/uploads/items/{{imagen}}" alt=""></td>
+                        <td>{{caracteristica}}</td>
+                        <td>
+                            <a href="/main/PurchaseItem/{{id}}" class="btn btn-success btn-block"><img src="../../public/img/car-shop.png"> Purchase</a>
+                            <a href="/main/info/{{id}}" class="btn btn-primary btn-block"><img src="../../public/img/car-shop.png"> Info</a>
+                        </td>
+                    </tr>
+                </tbody>
+            {{else}}
+                <div class="container p-4">
+                    <div class="col-md-3 mx-auto">
+                        <strong><em>No hay Busquedas</em></strong>
+                    </div>
+                </div>
+            
+            {{/each}}
+        </table>
+    </div>
+</div>

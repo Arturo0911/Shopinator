@@ -1,0 +1,64 @@
+/*
+========================================================
+========================================================
+========================================================
+Para poder utilizar los enlaces de la página navigation
+es qeu debe estar renderizado o redirigido desde esta
+pagina mediante el prefijo main/
+========================================================
+========================================================
+========================================================
+*/
+
+-- archivo del routeador -- 
+// para hacer un redirect se debe colocar el prefijo principal 
+// o sease, se debe anteponer el prefijo en este caso es /main/ 
+// de esta manera podemos hacer el res.redirect('/main/(lo pagina)');
+// así podemos subirlo
+
+-- -- 
+
+------
+const dataVisualizar = {
+        serie: enlaces.serie,
+        Nfoto,
+        id_propietario: enlaces.id_propietario,
+        fullname: enlaces.fullname,
+        alias: enlaces.alias,
+        nombre_producto: enlaces.nombre_producto,
+        caracteristica: enlaces.caracteristica,
+
+    };
+let imagenS = enlaces[0].imagen;
+    Nfoto = fs.writeFileSync('foto.jpeg', imagenS);
+
+------
+
+
+========================================================
+========================================================
+========================================================
+Mediante este script se puede agreagr items de tipo img a el servidor
+
+
+
+// '%' + filtro + '%'
+/*router.get('/prueba', (req, res) => {
+    res.render('links/prueba');
+});
+
+router.post('/prueba', async(req, res) => {
+    const imageUrl = randomNumber(); // numero aleatorio.
+    const imagePath = req.file.path; // directorio de donde está la imagen temporalmente.
+    const ext = path.extname(req.file.originalname).toLowerCase(); // la extension en minusculas
+    const targetPath = path.resolve(`src/public/uploads/${imageUrl}${ext}`); // donde ira el blanco para guardar la imagem
+
+    if (ext === '.png' || ext === '.jpg' || ext === '.jpeg' || ext === '.gif') {
+        await fs.rename(imagePath, targetPath);
+    }
+    res.send('Funciona');
+});
+
+router.get('/mostrar', async(req, res) => {
+    res.send('aqui');
+});*/

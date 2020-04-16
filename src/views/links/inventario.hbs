@@ -1,0 +1,38 @@
+<div class="containter p-4">
+    <div class="row">
+        <table class="table table-image" text-align="center">
+            <thead class="thead-dark" align="center">
+                <tr>
+                    <th scope="col">Serie</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">imagen</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            {{#each enlaces}}
+            <tbody>
+                <tr align="center">
+                    <td>{{serie}}</td>
+                    <td>{{nombre_producto}}</td>
+                    <td><img width="25%" class="img-thumbnail"  src="/public/uploads/items/{{imagen}}" alt="{{nombre_producto}}"></td>
+                    <td>{{stock}}</td>
+                    <td>{{caracteristica}}</td>
+                    <td>
+                        <a href="#" class="btn btn-danger btn-block"> Eliminar</a>
+                        <a href="#" class="btn btn-secondary btn-block"> Actualizar</a>
+                    </td>
+                </tr>
+            </tbody>
+            {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay información para mostrar </p>
+                    <a href="/main/add">crea uno</a>
+                </div>
+            </div>
+            {{/each}}
+        </table>
+    </div>
+</div>

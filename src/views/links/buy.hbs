@@ -1,0 +1,55 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8">
+            {{#each result}}
+                <div class="card" style="width: 18rem;">
+                    <img width="100%" class="img-thumbnail" src="/public/uploads/items/{{imagen}}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{nombre_producto}}</h5>
+                        <p class="card-text">{{caracteristica}}</p>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#myModal">Adquirir</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>¿ Agregar más productos al carrito ?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="/main/adquirir/{{id}}" class="btn btn-primary"><img src="../../public/img/buy.png" alt="">
+                                            comprar
+                                        </a>
+                                        <a type="button" href="/main/filtro" class="btn btn-secondary">Si</a>
+                                        <a type="button" href="#" class="btn btn-danger" data-dismiss="modal">No</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+
+
+        </div>
+
+        <div class="col-md-4">
+            {{#each Vendedor}}
+            <div class="card" style="width: 18rem;">
+                <img width="100%" class="img-thumbnail" src="/public/uploads/users/{{imagen}}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{nombres}}</h5>
+                    <h5 class="card-title">{{apellidos}}</h5>
+                    <h5 class="card-title">{{telefono}}</h5>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</div>

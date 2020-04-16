@@ -1,0 +1,27 @@
+<table class="table" text-align="center">
+  <thead class="thead-dark" align="center">
+    <tr>
+      <th scope="col">Propietario</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">imagen</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  {{#each values}}
+
+    <tbody>
+      <tr align="center">
+        <td>{{fullname}}</td>
+        <td>{{nombre_producto}}</td>
+        <td><img width="25%" class="img-thumbnail" src="/public/uploads/{{imagen}}" alt=""></td>
+        <td>{{caracteristica}}</td>
+        <td>
+          <a href="/main/PurchaseItem/{{serie}}/{{id_propietario}}" class="btn btn-success btn-block"><img
+              src="../../public/img/car-shop.png"> Purchase</a>
+          <a href="#" class="btn btn-primary btn-block"> Info</a>
+        </td>
+      </tr>
+    </tbody>
+  {{/each}}
+</table>

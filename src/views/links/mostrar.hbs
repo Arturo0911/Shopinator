@@ -1,0 +1,12 @@
+<div class="containter p-4">
+    {{#each pruebas}}
+        <div class="form-group">
+            <img src ="{{foto}}">
+        </div>
+        <div>
+            <canvas>{{foto}}</canvas>
+        </div>
+    {{else}}    
+        <a href="/main/prueba">crear tarea</a>
+    {{/each}}
+</div>

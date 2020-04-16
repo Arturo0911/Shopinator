@@ -1,0 +1,37 @@
+<div class="containter p-4">
+    <div class="row">
+        <div class="col-md-4 ">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/main/add" method="POST" enctype="multipart/form-data" role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="serie" placeholder="Serie del producto" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control" name="image">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="stock" placeholder="Cantidad en stock">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="alias" placeholder="alias">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="nombre_producto" placeholder="Nombre del producto">
+                        </div>
+                        <div class="form-group">
+                            <textarea  placeholder="Descripcion" class="form-control" maxlength="1000" name="caracteristica"  rows="5"  ></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block"> 
+                                save
+                            </button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

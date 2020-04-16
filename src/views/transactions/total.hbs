@@ -1,0 +1,50 @@
+<div class="container p-4">
+    <form action="/main/process" method="POST">
+        <div class="row">
+            {{#each items }}
+                <div class="col-md-3">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img width="100%" class="img-thumbnail" src="/public/uploads/items/{{imagen}}" alt="">
+                        <div class="card-body">
+                            <!--<h5></h5>-->
+                            <h5>Producto: <strong>{{alias}}</strong></h5>
+                            <h5>Propietario: <strong>{{fullname}}</strong></h5>
+                            <p>Descripcion: <strong>{{caracteristica}}</strong></p>
+                            <a class="btn btn-success">Confirmar</a>
+                            <a href="/main/carItems/{{id}}" class="btn btn-danger">Eliminar Item</a>
+
+                        </div>
+                    </div>
+                </div>
+            {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                        <p>No hay nada en el carrito</p>
+                        <a href="/main/filtro">Revisa todas las publicaciones</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </form>
+
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Eliminar toda la compra</button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <p>¿ Está seguro ?</p>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" href="/main/Withoutitems" class="btn btn-secondary">Si</a>
+                    <a type="button" href="#" class="btn btn-danger" data-dismiss="modal">No</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
